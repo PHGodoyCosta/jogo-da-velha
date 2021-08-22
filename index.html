@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonas</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        h1 {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 40px;
+        }
+        #vez {
+            text-align: center;
+        }
+        .tabuleiro {
+            position: relative;
+            background-color: black;
+            width: 315px;
+            height: 315px;
+            margin: auto;
+        }
+        .blocos {
+            position: relative;
+            color: black;
+            display: inline-block;
+            margin: 0;
+            width: 100px;
+            height: 100px;
+            border: 1px solid white;
+            margin-bottom: 2.7px;
+        }
+        .tabuleiro > div > p {
+            position: static;
+            text-align: center;
+            font-size: 3em;
+            margin: 0;
+            margin-top: 25px;
+        }
+        .controle {
+            background-color: greenyellow;
+            width: 349px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            margin: auto;
+            margin-top: 60px;
+            text-align: center;
+        }
+        .controle > input {
+            margin-left: 30px;
+        }
+        .diagonais {
+            position: absolute;
+            top: 0;
+            background-color: white;
+            width: 10px;
+            height: 315px;
+            border-radius: 10px;
+
+        }
+        #d1 {
+            visibility: hidden;
+            transform: rotate(45deg);
+            right: 49%;
+            top: -20%;
+            height: 439px;
+        }
+        #d2 {
+            visibility: hidden;
+            transform: rotate(-45deg);
+            height: 439px;
+            top: -20%;
+            left: 48%;
+        }
+        #d3 {
+            visibility: hidden;
+            left: 48%;
+        }
+        #d4 {
+            visibility: hidden;
+            width: 315px;
+            height: 10px;
+            top: 47%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jogo da velha</h1>
+    <p id="vez">Movimentos: 0</p>
+    <div class="tabuleiro">
+        <div id="q0" class="blocos"><p>P</p></div>
+        <div id="q1" class="blocos"><p>P</p></div>
+        <div id="q2" class="blocos"><p>P</p></div>
+        <div id="q3" class="blocos"><p>P</p></div>
+        <div id="q4" class="blocos"><p>P</p></div>
+        <div id="q5" class="blocos"><p>P</p></div>
+        <div id="q6" class="blocos"><p>P</p></div>
+        <div id="q7" class="blocos"><p>P</p></div>
+        <div id="q8" class="blocos"><p>P</p></div>
+        <div id="d1" class="diagonais"></div>
+        <div id="d2" class="diagonais"></div>
+        <div id="d3" class="diagonais"></div>
+        <div id="d4" class="diagonais"></div>
+    </div>
+    <div class="controle">
+        <input type="button" value="1 Jogador" id="j1">
+        <input type="button" value="2 Jogadores" id="j2">
+        <input type="button" value="Começar" id="start">
+    </div>
+    <p id="querida"></p>
+    <p id="rejeitada"></p>
+
+    <script src="jogo_da_velha.js"></script>
+</body>
+</html>
